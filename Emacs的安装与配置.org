@@ -12,3 +12,19 @@ emacs的大名不用我过多的叙述，这里借用维基百科的描述简单
 - 将myelpa-stable解压到~/projs/myelpa，确保解压的文件里有名为archive-contents的文件。
 - 编辑~/.emacs.d/lisp/init-elpa.el，定位到~/myelpa/的所在行，取消注释即删除前面的两个英文分号，然后将所有的符号~替换为你的家目录。我修改的时候一共有三处~。
 - 接下来就可以打开你的emacs了，打开后会出现是否选择最快软件源的提示，选择yes即可。接下来就是等待自动配置，直到你看到;;Happy hacing 用户名 - Emacs loves you!恭喜你说明配置成功了，你可以继续享受emacs的折磨了。之后启动emacs的时候可能会顿一下，不要慌，正常。
+** 个人配置
+- 打开~/.emacs.d/init.el，找到包含evil的所在的行，将其注释掉（在本行前面输入英文分号）。evil是在emacs下使用vim的一些快捷键，我对vim的快捷键不了解，所以就注释掉了。
+- 将中文编码环境设置为utf-8,这样可以避免许多乱码的问题，在custom-set-variables.el中添加\\
+#+begin_src
+;;将语言环境设置为utf-8格式
+(set-language-environment "utf-8")
+#+end_src
+- 设置启动窗框的默认大小\\
+#+begin_src
+;;可自行调节合适的大小
+(set-frame-position (selected-frame) 100 100)
+(set-frame-width (selected-frame) 110)
+(set-frame-height (selected-frame) 25)
+#+end_src
+- 设置主题\\
+M-x load-theme，我使用的主题是Solarized Dark，记得选择保存；也可以点击工具栏的Options-Customize Emacs-Custom Themes，在其中设置。字体的选择也可点击工具栏的Options-Set Default Font选项中选择，配置完后记得按Save Options保存你的配置。有的Emacs的配置启动完后可能没有工具栏选项，我是在一启动Emacs的时候就点击一下一闪而过的工具栏，在Emacs完全启动后就可以正常点击了选项了
