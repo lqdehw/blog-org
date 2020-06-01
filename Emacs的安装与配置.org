@@ -1,0 +1,14 @@
+* Emacs是什么？
+emacs的大名不用我过多的叙述，这里借用维基百科的描述简单的说明一下，它是一个文本编辑器家族，为什么叫家族呢？因为其具有很强大的扩展能力。
+* 安装与配置Emacs
+** 安装
+- 下载[[https://www.gnu.org/software/emacs/][Emacs]]，它可以在许多平台上使用，这里主要说在windows10下是怎样安装的，点击主页面的windows下载图标后，会进入windows的下载页面，这里选择nearby GNU mirror，就是离你最近的服务器的下载地址。会出现很多emacs的版本，这里选择最新的emacs-26。点击后拉倒最下面，选择[[https://mirrors.ocf.berkeley.edu/gnu/emacs/windows/emacs-26/emacs-26.3-x86_64.zip][emacs-26.3-x86-64.zip]]，no-deps是没有依赖包的版本。
+- 将下载好的emacs，直接解压到你想要的位置，这里解压到D:/emacs,进入D:/emacs/bin,找到runemacs.exe,右键添加快捷方式到桌面，方便操作以后打开。实际上，现在你就可以直接用emacs了，只不过没有进行任何的配置，用起来很不顺手。
+** 配置
+- 当然你如果想配置自己的emacs也是可以的。但是，那可能花费你大量的时间才能做到得心应手。如果你的能力强悍，我说的都是废话。我这里使用了[[https://github.com/redguardtoo/emacs.d][redguardtoo]]的配置，在你配置完emacs后，拜读一下这位大神写的[[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-emacs-%E5%8F%AF%E9%80%89][一年成为Emacs高手]],一定会打开你通往新世界的大门。他的配置页有详细的介绍如何使用他的配置文件，但可惜是英文的。这可能拦住了一部分的朋友，其实你可以试着使用翻译慢慢地一步一步的理解，毕竟有的资料经过转述可能就会变味儿，我这里还是简单的转述一下，大可不必看的。
+- Install stable version(OPTIONAL) 我这里说明一下，稳定版本的操作步骤。你知道的在国内可能normal way有些朋友会不成功。
+- 下载两个文件 [[https://codeload.github.com/redguardtoo/emacs.d/zip/stable][emacs.d-stable.zip]]和[[https://codeload.github.com/redguardtoo/emacs.d/zip/stable][myelpa-stable.zip]]
+- 将emacs.d-stable解压到~/.emacs.d/目录下，在win10中"~"代表的目录一般是C:\Users\你的用户名\AppData\Roaming,你可以使用win+r打开运行窗口，在里面输入%AppData%就可以打开相应目录。
+- 将myelpa-stable解压到~/projs/myelpa，确保解压的文件里有名为archive-contents的文件。
+- 编辑~/.emacs.d/lisp/init-elpa.el，定位到~/myelpa/的所在行，取消注释即删除前面的两个英文分号，然后将所有的符号~替换为你的家目录。我修改的时候一共有三处~。
+- 接下来就可以打开你的emacs了，打开后会出现是否选择最快软件源的提示，选择yes即可。接下来就是等待自动配置，直到你看到;;Happy hacing 用户名 - Emacs loves you!恭喜你说明配置成功了，你可以继续享受emacs的折磨了。之后启动emacs的时候可能会顿一下，不要慌，正常。
