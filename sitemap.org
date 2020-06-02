@@ -1,4 +1,5 @@
 #+TITLE: Sitemap
 
+- [[file:键道6.org][键道6]]
 - [[file:Emacs的安装与配置.org][Emacs的安装与配置]]
 - [[file:index.org][index]]
