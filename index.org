@@ -1,1 +1,5 @@
-[[file:sitemap.org][sitemap]]
+file:img/2020000.jpg
+
+博客采用org-mode编写。最初搭建于2020年4月初，采用hugo模板，托管于github，用于记录探索学习的过程。后在5月接触到Emacs，了解到org-mode，在看了许多大神的blog后，深受吸引。于是转投其中，折磨自己。博客参照[[https://ogbe.net/][Dennis Ogbe]]和许多爱好者的译文，在此感谢各位的细致讲解，受益匪浅。\\
+- Github:https://github.com/lqdehw
+- Blog:https://lqdehw.github.io
